@@ -1,5 +1,5 @@
 {
-  Copyright (c) 2016, Vencejo Software
+  Copyright (c) 2018, Vencejo Software
   Distributed under the terms of the Modified BSD License
   The full license is distributed with this software
 }
@@ -19,7 +19,7 @@ uses
 {$ENDIF};
 
 type
-  TParserVariableTest = class(TTestCase)
+  TParserVariableTest = class sealed(TTestCase)
   published
     procedure TestName;
     procedure TestValue;
@@ -35,6 +35,20 @@ begin
   Result := 'text one';
 end;
 
+procedure TParserVariableTest.TestName;
+begin
+  CheckEquals('tag1', TParserVariable.New('tag1').Name);
+end;
+
+procedure TParserVariableTest.TestValue;
+var
+  ParserVariable: IParserVariable;
+begin
+  ParserVariable := TParserVariable.New('tag1');
+  ParserVariable.ChangeValue('text one');
+  CheckEquals('text one', ParserVariable.Value);
+end;
+
 procedure TParserVariableTest.TestCallback;
 var
   ParserVariable: IParserVariable;
@@ -45,7 +59,7 @@ end;
 
 function TestTagCallbackParam(const aCallBack: IParserCallback): string;
 begin
-  Result := 'text one' + aCallBack.ParameterList.FindByName('param1').Value;
+  Result := 'text one' + aCallBack.Parameters.FindByName('param1').Value;
 end;
 
 procedure TParserVariableTest.TestCallbackParam;
@@ -54,14 +68,14 @@ var
   ParserCallback: IParserCallback;
 begin
   ParserCallback := TParserCallback.New(TestTagCallbackParam);
-  ParserCallback.ParameterList.Add(TParserConstant.New('PARAM1', ' line two'));
+  ParserCallback.Parameters.Add(TParserConstant.New('PARAM1', ' line two'));
   ParserVariable := TParserVariable.New('tag1', ParserCallback);
   CheckEquals('text one line two', ParserVariable.Value);
 end;
 
 function TestTagCallbackParamChange(const aCallBack: IParserCallback): string;
 begin
-  Result := 'text one' + aCallBack.ParameterList.FindByName('param1').Value;
+  Result := 'text one' + aCallBack.Parameters.FindByName('param1').Value;
 end;
 
 procedure TParserVariableTest.TestCallbackParamChange;
@@ -70,27 +84,11 @@ var
   ParserCallback: IParserCallback;
 begin
   ParserCallback := TParserCallback.New(TestTagCallbackParamChange);
-  ParserCallback.ParameterList.Add(TParserConstant.New('PARAM1', ' line two'));
+  ParserCallback.Parameters.Add(TParserConstant.New('PARAM1', ' line two'));
   ParserVariable := TParserVariable.New('tag1', ParserCallback);
-  ParserCallback.ParameterList.Clear;
-  ParserCallback.ParameterList.Add(TParserConstant.New('param1', ' 1234.'));
+  ParserCallback.Parameters.Clear;
+  ParserCallback.Parameters.Add(TParserConstant.New('param1', ' 1234.'));
   CheckEquals('text one 1234.', ParserVariable.Value);
-end;
-
-procedure TParserVariableTest.TestName;
-var
-  ParserVariable: IParserVariable;
-begin
-  ParserVariable := TParserVariable.New('tag1', 'text one');
-  CheckEquals('tag1', ParserVariable.Name);
-end;
-
-procedure TParserVariableTest.TestValue;
-var
-  ParserVariable: IParserVariable;
-begin
-  ParserVariable := TParserVariable.New('tag1', 'text one');
-  CheckEquals('text one', ParserVariable.Value);
 end;
 
 initialization
