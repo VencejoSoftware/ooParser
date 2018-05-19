@@ -16,7 +16,7 @@ interface
 
 uses
   SysUtils,
-  ooList, ooList.Enumerable,
+  ooList, ooIterableList,
   ooParser.Element.Intf;
 
 type
@@ -30,7 +30,7 @@ type
   )
 }
 {$ENDREGION}
-  IParserElementList<T: IParserElement> = interface(IGenericListEnumerable<T>)
+  IParserElementList<T: IParserElement> = interface(IIterableList<T>)
     ['{28792FE4-9EB2-42BB-BEDA-43883A79DCD3}']
     function FindByName(const Name: string): T;
   end;
@@ -45,7 +45,7 @@ type
 }
 {$ENDREGION}
 
-  TParserElementList<T: IParserElement> = class sealed(TListEnumerable<T>, IParserElementList<T>)
+  TParserElementList<T: IParserElement> = class sealed(TIterableList<T>, IParserElementList<T>)
   public
     function FindByName(const Name: string): T;
     class function New: IParserElementList<T>;
