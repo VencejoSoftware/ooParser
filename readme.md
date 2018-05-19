@@ -10,13 +10,13 @@ If not exists folder "code-documentation" then run the batch "build_doc". The ma
 ### Demo
 See tests code for examples of use.
 
-## Built With
-* [Delphi&reg;](https://www.embarcadero.com/products/rad-studio) - Embarcadero&trade; commercial IDE
-* [Lazarus](https://www.lazarus-ide.org/) - The Lazarus project
-
 ## Dependencies
 * [ooGeneric](https://github.com/VencejoSoftware/ooGeneric.git) - Generic object oriented list
 * [ooText](https://github.com/VencejoSoftware/ooText.git) - Object pascal string library
+
+## Built With
+* [Delphi&reg;](https://www.embarcadero.com/products/rad-studio) - Embarcadero&trade; commercial IDE
+* [Lazarus](https://www.lazarus-ide.org/) - The Lazarus project
 
 ## Contribute
 This are an open-source project, and they need your help to go on growing and improving.
