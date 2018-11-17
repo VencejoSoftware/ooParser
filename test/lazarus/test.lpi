@@ -122,43 +122,43 @@
         <IsPartOfProject Value="True"/>
       </Unit0>
       <Unit1>
-        <Filename Value="..\code\ooParser.Variable_test.pas"/>
+        <Filename Value="..\..\code\Parser.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit1>
       <Unit2>
-        <Filename Value="..\..\code\ooParser.Callback.pas"/>
+        <Filename Value="..\..\code\ParserCallback.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit2>
       <Unit3>
-        <Filename Value="..\..\code\ooParser.Variable.pas"/>
+        <Filename Value="..\..\code\ParserConstant.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit3>
       <Unit4>
-        <Filename Value="..\code\ooParser.Callback_test.pas"/>
+        <Filename Value="..\..\code\ParserElement.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit4>
       <Unit5>
-        <Filename Value="..\code\ooParser.Constant_test.pas"/>
+        <Filename Value="..\..\code\ParserElementList.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit5>
       <Unit6>
-        <Filename Value="..\code\ooParser.ElementList_test.pas"/>
+        <Filename Value="..\..\code\ParserVariable.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit6>
       <Unit7>
-        <Filename Value="..\..\code\ooParser.Constant.pas"/>
+        <Filename Value="..\code\ParserCallback_test.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit7>
       <Unit8>
-        <Filename Value="..\..\code\ooParser.Element.Intf.pas"/>
+        <Filename Value="..\code\ParserConstant_test.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit8>
       <Unit9>
-        <Filename Value="..\..\code\ooParser.ElementList.pas"/>
+        <Filename Value="..\code\ParserElementList_test.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit9>
       <Unit10>
-        <Filename Value="..\..\code\ooParser.pas"/>
+        <Filename Value="..\code\ParserVariable_test.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit10>
     </Units>

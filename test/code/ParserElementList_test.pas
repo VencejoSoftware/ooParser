@@ -3,15 +3,15 @@
   Distributed under the terms of the Modified BSD License
   The full license is distributed with this software
 }
-unit ooParser.ElementList_test;
+unit ParserElementList_test;
 
 interface
 
 uses
   SysUtils,
-  ooParser.Constant,
-  ooParser.Element.Intf,
-  ooParser.ElementList,
+  ParserConstant,
+  ParserElement,
+  ParserElementList,
 {$IFDEF FPC}
   fpcunit, testregistry
 {$ELSE}

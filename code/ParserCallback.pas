@@ -10,13 +10,13 @@
   @author Vencejo Software <www.vencejosoft.com>
 }
 {$ENDREGION}
-unit ooParser.Callback;
+unit ParserCallback;
 
 interface
 
 uses
   Classes, SysUtils,
-  ooParser.Element.Intf, ooParser.ElementList;
+  ParserElement, ParserElementList;
 
 type
 {$REGION 'documentation'}

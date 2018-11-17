@@ -10,12 +10,12 @@
   @author Vencejo Software <www.vencejosoft.com>
 }
 {$ENDREGION}
-unit ooParser.Constant;
+unit ParserConstant;
 
 interface
 
 uses
-  ooParser.Element.Intf;
+  ParserElement;
 
 type
 {$REGION 'documentation'}

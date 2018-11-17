@@ -5,27 +5,29 @@
   The full license is distributed with this software
 }
 {
-  Parser element
+  Text parser
   @created(09/05/2018)
   @author Vencejo Software <www.vencejosoft.com>
 }
 {$ENDREGION}
-unit ooParser.Element.Intf;
+unit Parser;
 
 interface
 
 type
 {$REGION 'documentation'}
 {
-  @abstract(Parser element interface)
-  @member(Name Name identifier)
-  @member(Value Element content)
+  @abstract(Text parser interface)
+  @member(
+    Evaluate Evaluate text and run parser
+    @param(Text Text to parse)
+    @return(Text parser)
+  )
 }
 {$ENDREGION}
-  IParserElement = interface
-    ['{1E9588AC-DFBE-4635-831C-0BEBC1E43B77}']
-    function Name: String;
-    function Value: String;
+  IParser = interface
+    ['{6D875C88-167B-4142-9D05-2053D98FC879}']
+    function Evaluate(const Text: String): String;
   end;
 
 implementation

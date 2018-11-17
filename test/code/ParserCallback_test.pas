@@ -3,15 +3,15 @@
   Distributed under the terms of the Modified BSD License
   The full license is distributed with this software
 }
-unit ooParser.Callback_test;
+unit ParserCallback_test;
 
 interface
 
 uses
   SysUtils,
-  ooParser.Constant,
-  ooParser.Element.Intf,
-  ooParser.Callback,
+  ParserConstant,
+  ParserElement,
+  ParserCallback,
 {$IFDEF FPC}
   fpcunit, testregistry
 {$ELSE}
