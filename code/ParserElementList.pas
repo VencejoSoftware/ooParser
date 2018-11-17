@@ -10,14 +10,14 @@
   @author Vencejo Software <www.vencejosoft.com>
 }
 {$ENDREGION}
-unit ooParser.ElementList;
+unit ParserElementList;
 
 interface
 
 uses
   SysUtils,
-  ooList, ooIterableList,
-  ooParser.Element.Intf;
+  List, IterableList,
+  ParserElement;
 
 type
 {$REGION 'documentation'}

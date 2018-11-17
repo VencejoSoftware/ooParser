@@ -10,14 +10,14 @@
   @author Vencejo Software <www.vencejosoft.com>
 }
 {$ENDREGION}
-unit ooParser.Variable;
+unit ParserVariable;
 
 interface
 
 uses
   SysUtils,
-  ooParser.Callback,
-  ooParser.Element.Intf;
+  ParserCallback,
+  ParserElement;
 
 type
 {$REGION 'documentation'}

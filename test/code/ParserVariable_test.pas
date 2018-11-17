@@ -3,15 +3,15 @@
   Distributed under the terms of the Modified BSD License
   The full license is distributed with this software
 }
-unit ooParser.Variable_test;
+unit ParserVariable_test;
 
 interface
 
 uses
   SysUtils,
-  ooParser.Variable,
-  ooParser.Constant,
-  ooParser.Callback,
+  ParserVariable,
+  ParserConstant,
+  ParserCallback,
 {$IFDEF FPC}
   fpcunit, testregistry
 {$ELSE}
